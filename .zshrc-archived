@@ -1,0 +1,248 @@
+
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████                                               __   ____   ___  _  _  __  _  _  ____                                         █████
+# █████                                              / _\ (  _ \ / __)/ )( \(  )/ )( \(  __)                                        █████
+# █████                                             /    \ )   /( (__ ) __ ( )( \ \/ / ) _)                                         █████
+# █████                                             \_/\_/(__\_) \___)\_)(_/(__) \__/ (____)                                        █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                                 █████
+# █████ # | Wechat Mini Extension |                                                                                                 █████
+# █████ # \_______________________/                                                                                                 █████
+# █████ # (Using Oh-My-Wechat)       Github Repo On: https://github.com/MustangYM/WeChatExtension-ForMac                            █████
+# █████ # (Insatlling omw)           curl -o- -L https://omw.limingkai.cn/install.sh | bash -s                                      █████
+# █████ # (Update to newest version) omw -n                                                                                         █████
+# █████ # (Use local version to ins) omw -g                                                                                         █████
+# █████ alias install_wechat_extension="omw -n"                                                                                     █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                                 █████
+# █████ # |  Brew Update/Upgrade  |                                                                                                 █████
+# █████ # \_______________________/                                                                                                 █████
+# █████ # Unshallow                                                                                                                 █████
+# █████ # git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core fetch --unshallow                                          █████
+# █████ # git -C /usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask fetch --unshallow                                          █████
+# █████ # 开启下面的选项, 以自动执行更新命令                                                                                             █████
+# █████ # brew update       # UPDATE: update is used to download package information from all configured sources.                   █████
+# █████ #                   # (从源服务器下载的metadata, 包括这个源有什么包, 包是什么版本, 下一个新的版本去哪里下等等)                          █████
+# █████ # brew outdated     # 查看过时的包                                                                                            █████
+# █████ # brew upgrade      # 通过源服务器通过update命令下载的metadata, 更新所有的包                                                      █████
+# █████ # brew cleanup      # 删除过时的包, 包括作为依赖被下下来但是不再被需要的                                                            █████
+# █████ #                   # (Homebrew不会帮我们自动移除旧版本的软件包,你需要手动执行该命令去移除软件包)                                      █████
+# █████ # Update,Upgrade (更新/升级)                                                                                                 █████
+# █████ # alias bubo='brew update && brew outdated'                                                                                 █████
+# █████ # alias bubc='brew upgrade && brew cleanup'                                                                                 █████
+# █████ # alias bubu='bubo && bubc'                                                                                                 █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                               █████
+# █████ # # |        Proxy          |                                                                                               █████
+# █████ # # \_______________________/                                                                                               █████
+# █████ # # V2Ray                                                                                                                   █████
+# █████ # # export https_proxy="http://127.0.0.1:8001"; export HTTPS_PROXY="http://127.0.0.1:8001"                                  █████
+# █████ # # export http_proxy="http://127.0.0.1:48738"; export https_proxy="http://127.0.0.1:48738";                                █████
+# █████ # # alias setproxy="export ALL_PROXY=http://127.0.0.1:48738"                                                                █████
+# █████ # # alias unsetproxy="unset ALL_PROXY"                                                                                      █████
+# █████ # # Trojan                                                                                                                  █████
+# █████ # alias useProxy_http="export HTTP_PROXY=http://127.0.0.1:7890;"                                                            █████
+# █████ # alias useProxy_https="export HTTPS_PROXY=http://127.0.0.1:7890;"                                                          █████
+# █████ # alias useProxy_all="export ALL_PROXY=socks5://127.0.0.1:7890;"                                                            █████
+# █████ # alias unsetProxy_http="unset HTTP_PROXY"                                                                                  █████
+# █████ # alias unsetProxy_https="unset HTTPS_PROXY"                                                                                █████
+# █████ # alias unsetProxy_all="unset ALL_PROXY"                                                                                    █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # proxy_init(){                                                                                                             █████
+# █████ #     # 设置转发                                                                                                             █████
+# █████ #     useProxy_http;      # export HTTP_PROXY=http://127.0.0.1:7890;                                                        █████
+# █████ #     useProxy_https;     # export HTTPS_PROXY=http://127.0.0.1:7890;                                                       █████
+# █████ #     useProxy_all;       # export ALL_PROXY=socks5://127.0.0.1:7890;                                                       █████
+# █████ # }                                                                                                                         █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # proxy_on(){                                                                                                               █████
+# █████ #     # 设置转发                                                                                                              █████
+# █████ #     useProxy_http;      # export HTTP_PROXY=http://127.0.0.1:7890;                                                        █████
+# █████ #     useProxy_https;     # export HTTPS_PROXY=http://127.0.0.1:7890;                                                       █████
+# █████ #     useProxy_all;       # export ALL_PROXY=socks5://127.0.0.1:7890;                                                       █████
+# █████ #     # 打印信息                                                                                                              █████
+# █████ #     clear;                                                                                                                █████
+# █████ #     echo "";                                                                                                              █████
+# █████ #     # echo "/‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\\";                                                                █████
+# █████ #     # echo "|  The terminal traffic has been proxied  |";                                                                 █████
+# █████ #     # echo "\\_________________________________________/";                                                                █████
+# █████ #     echo "                ____________               "                                                                    █████
+# █████ #     echo "---------------| Proxy :On  |--------------"                                                                    █████
+# █████ #     echo "                ‾‾‾‾‾‾‾‾‾‾‾‾               "                                                                    █████
+# █████ #     echo ""                                                                                                               █████
+# █████ #     curl cip.cc;      # Print new IP info                                                                                 █████
+# █████ #     echo ""                                                                                                               █████
+# █████ #     echo "         ___________________________       "                                                                    █████
+# █████ #     echo "--------| Press any key to exit ... |------"                                                                    █████
+# █████ #     echo "         ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾       "                                                                    █████
+# █████ #     read user_random_input;                                                                                               █████
+# █████ #     clear;                                                                                                                █████
+# █████ # }                                                                                                                         █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # proxy_off(){                                                                                                              █████
+# █████ #     # 取消转发                                                                                                             █████
+# █████ #     unsetProxy_http;      # export HTTP_PROXY=http://127.0.0.1:58591;                                                     █████
+# █████ #     unsetProxy_https;     # export HTTPS_PROXY=http://127.0.0.1:58591;                                                    █████
+# █████ #     unsetProxy_all;       # export ALL_PROXY=socks5://127.0.0.1:51837;                                                    █████
+# █████ #     # 打印信息                                                                                                             █████
+# █████ #     clear;                                                                                                                █████
+# █████ #     echo "";                                                                                                              █████
+# █████ #     # echo "/‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\\";                                                                █████
+# █████ #     # echo "|  The terminal traffic has been proxied  |";                                                                 █████
+# █████ #     # echo "\\_________________________________________/";                                                                █████
+# █████ #     echo "                ____________               "                                                                    █████
+# █████ #     echo "---------------| Proxy :Off |--------------"                                                                    █████
+# █████ #     echo "                ‾‾‾‾‾‾‾‾‾‾‾‾               "                                                                    █████
+# █████ #     echo ""                                                                                                               █████
+# █████ #     curl cip.cc;      # Print new IP info                                                                                 █████
+# █████ #     echo ""                                                                                                               █████
+# █████ #     echo "         ___________________________       "                                                                    █████
+# █████ #     echo "--------| Press any key to exit ... |------"                                                                    █████
+# █████ #     echo "         ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾       "                                                                    █████
+# █████ #     read user_random_input;                                                                                               █████
+# █████ #     clear;                                                                                                                █████
+# █████ # }                                                                                                                         █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                                 █████
+# █████ # |      File Suffix      |                                                                                                 █████
+# █████ # \_______________________/                                                                                                 █████
+# █████ # alias javac="javac -J-Dfile.encoding=utf8"                                                                                █████
+# █████ # alias grep="grep --color=auto"                                                                                            █████
+# █████ # alias -s html=mate   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开                                                █████
+# █████ # alias -s rb=mate     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开                                                        █████
+# █████ # alias -s py=vi       # 在命令行直接输入 python 文件，会用 vim 中打开，以下类似                                                   █████
+# █████ # alias -s js=vi                                                                                                            █████
+# █████ # alias -s c=vi                                                                                                             █████
+# █████ # alias -s java=vi                                                                                                          █████
+# █████ # alias -s txt=vi                                                                                                           █████
+# █████ # alias -s gz='tar -xzvf'                                                                                                   █████
+# █████ # alias -s tgz='tar -xzvf'                                                                                                  █████
+# █████ # alias -s zip='unzip'                                                                                                      █████
+# █████ # alias -s bz2='tar -xjvf'                                                                                                  █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                                 █████
+# █████ # |    Must Have Alias    |                                                                                                 █████
+# █████ # \_______________________/                                                                                                 █████
+# █████ # NOTE:                                                                                                                     █████
+# █████ # - DO NOT comment any of the one line, as the posterior commands might be based on them                                    █████
+# █████ # #                                                                                                                         █████
+# █████ # ZSH 设置                                                                                                                   █████
+# █████ # export ZSH="/Users/suoweihu/.oh-my-zsh"                                                                                   █████
+# █████ # export ZSH="/Users/suoweihu/.zshrc"                                                                                       █████
+# █████ # source $ZSH/oh-my-zsh.sh                                                                                                  █████
+# █████ # #                                                                                                                         █████
+# █████ # 环境变量配置 (Environmental1 Variable)                                                                                      █████
+# █████ # export ROOT="/"                                                                                                           █████
+# █████ # export HOME="/Users/suoweihu"                                                                                             █████
+# █████ # export DESKTOP="/Users/suoweihu/Desktop"                                                                                  █████
+# █████ # export DOWNLOAD="/Users/suoweihu/Downloads"                                                                               █████
+# █████ # export DOWNLOADS="/Users/suoweihu/Downloads"                                                                              █████
+# █████ # export PATH="/Users/suoweihu/opt/anaconda3/bin:$PATH"  # commented out by conda initialize                                █████
+# █████ # export PATH=$PATH:/Users/suoweihu/opt/GNAT/2019/bin  # For ada compilation of gnatmake 2019                               █████
+# █████ # export PATH=$PATH:/Users/suoweihu/opt/GNAT/2018/bin  # For ada compilation of gnatmake 2018                               █████
+# █████ # PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}" # For pyton 2.7 to 3.9                               █████
+# █████ # #                                                                                                                         █████
+# █████ # setopt INTERACTIVE_COMMENTS                       # Enable comment feature for the ZSH (with hash \#)                     █████
+# █████ # autoload -U compinit                              # auto complete (deletable)                                             █████
+# █████ # compinit                                          # auto complete (deletable)                                             █████
+# █████ # alias example='f() { echo Your arg was $1. };f'   # Example of making a function in ZSH                                   █████
+# █████ # alias cls='clear'                                 # Use CLS rather than clear (being consistent with WIN)                 █████
+# █████                                                                                                                             █████
+# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                             █████
+# █████ # # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                               █████
+# █████ # # |      Navigation       |                                                                                               █████
+# █████ # # \_______________________/                                                                                               █████
+# █████ # # Note:                                                                                                                   █████
+# █████ # # - lsd has been delted for the simplicity's sake                                                                         █████
+# █████ # # LS                                                                                                                      █████
+# █████ # alias ll='ls -l'                                    # Use ll for ls -l (print in files in list formatte)                  █████
+# █████ # alias la='ls -a'                                    # Use la for ls -a (print all files)                                  █████
+# █████ # # CD                                                                                                                      █████
+# █████ # alias cddesktop='cd /Users/suoweihu/Desktop'        # open desktop folder                                                 █████
+# █████ # alias cddownload='cd /Users/suoweihu/Downloads'     # open download folder                                                █████
+# █████ # alias cddownloads='cd /Users/suoweihu/Downloads'    # open download folder (s)                                            █████
+# █████ # alias cdroot='cd /'                                 # open root folder                                                    █████
+# █████ # alias cdhome='cd ~'                                 # open user's home folder                                             █████
+# █████ # # PWD                                                                                                                     █████
+# █████ # alias showpath='pwd'                                # show current path                                                   █████
+# █████ # alias copypath='pwd|pbcopy'                         # copy current path                                                   █████
+# █████                                                                                                                             █████
+# ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                                                                                                                                                                                                                            ████
+# █████ # # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                                                                                                                                                                                                                              ████
+# █████ # # |      YouTube DL       |                                                                                                                                                                                                                                                                                              ████
+# █████ # # \_______________________/                                                                                                                                                                                                                                                                                              ████
+# █████ # # NOTE:                                                                                                                                                                                                                                                                                                                  ████
+# █████ # # - The commented one may not work for the maintainance sake                                                                                                                                                                                                                                                             ████
+# █████ # # - Try to avoid using the more complex command as they use dependencides such as FFMPEG (bestAudio + bestVideo)                                                                                                                                                                                                         ████
+# █████ # # GenericUsage (普通使用)                                                                                                                                                                                                                                                                                                  ████
+# █████ # alias dl='downloadToDownloadFolder() { youtube-dl -o "~/Downloads/YouTube-dl/%(title)s-%(id)s.%(ext)s" $1 }; downloadToDownloadFolder'                     # Generic Download  (Normal quality video to Downlaod Folder)                                                                                                 ████
+# █████ # alias ydl='downloadToDownloadFolder() { youtube-dl -o "~/Downloads/YouTube-dl/%(title)s-%(id)s.%(ext)s" $1 }; downloadToDownloadFolder'                    # Generic Download  (Normal quality video to Downlaod Folder)                                                                                                 ████
+# █████ # alias youtubedl='downloadToDownloadFolder() { youtube-dl -o "~/Downloads/YouTube-dl/%(title)s-%(id)s.%(ext)s" $1 }; downloadToDownloadFolder'              # Generic Download  (Normal quality video to Downlaod Folder)                                                                                                 ████
+# █████ # # alias dlto='downloadToDownloadFolder() { youtube-dl -o "~/Downloads/YouTube-dl/%(title)s-%(id).%(ext)s" $1 }; downloadToDownloadFolder'                  # Generic Download  (Normal quality video to Downlaod Folder)                                                                                                 ████
+# █████ # # alias dl='downloadVideo() { youtube-dl -f  $1 }; downloadVideo'                                                                                          # Generic Download  (Normal quality video to current Folder)                                                                                                  ████
+# █████ # #                                                                                                                                                                                                                                                                                                                        ████
+# █████ # # Intermediate (最佳画质/音质)                                                                                                                                                                                                                                                                                             ████
+# █████ # # alias dlas='downloadAsFileName() { youtube-dl -o "~/Downloads/YouTube-dl/$2" $1 }; downloadAsFileName'                  # Download with specified file name                                                                                                                                                            ████
+# █████ # alias dlvideo='downloadBestVideo() { youtube-dl -f bestvideo+bestaudio $1 }; downloadBestVideo'                           # Download best quality video and audio and merge                                                                                                                                              ████
+# █████ # # alias dlaudio='downloadAudio() { youtube-dl -x $1 }; downloadAudio'                                                     # Download audio (By default it is OGG format)                                                                                                                                                 ████
+# █████ # alias dlaudio='downloadAudio() { youtube-dl -x --audio-format mp3 $1 }; downloadAudio'                                    # Download audio (To mp3 format)                                                                                                                                                               ████
+# █████ # # alias dlplaylist='downloadPlaylist() { youtube-dl -i -f mp4 --yes-playlist $1 }; downloadPlaylist'                      # Download play list                                                                                                                                                                           ████
+# █████ # #                                                                                                                                                                                                                                                                                                                        ████
+# █████ # # Complex Commands (复杂命令)                                                                                                                                                                                                                                                                                             ████
+# █████ # alias dlwithinfo='downloadWithInfo(){youtube-dl --write-description --write-info-json --write-annotations --write-sub --write-thumbnail $1}; downloadWithInfo'                                                    # Download with decrption, meta data, annotation, subtitle and                                         ████
+# █████ # alias dlplaylist='dlPlaylistToDLFolder() { youtube-dl -o "~/Downloads/YouTube-dl/%(playlist_title)s/%(playlist_index)s-%(title)s-%(id)s.%(ext)s" $1 }; dlPlaylistToDLFolder'                                      # Download Playlist (Normal quality video to Downlaod Folder) with labelling of video's index          ████
+# █████ # alias dlaudioplaylist='dlPlaylistToDLFolder() { youtube-dl -i -x --audio-format mp3 -o "~/Downloads/YouTube-dl/%(playlist_title)s/%(playlist_index)s-%(title)s-%(id)s.%(ext)s" $1 }; dlPlaylistToDLFolder'        # Download Playlist (Normal quality video to Downlaod Folder) with labelling of video's index          ████
+# █████                                                                                                                                                                                                                                                                                                                            ████
+# ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# █████                                                                                                                                                                                                                                                                                                                         ████
+# █████ # # /‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾\                                                                                                                                                                                                                                                                                           ████
+# █████ # # |      IP Address       |                                                                                                                                                                                                                                                                                           ████
+# █████ # # \_______________________/                                                                                                                                                                                                                                                                                           ████
+# █████ # # IP : 查询公网IP地址                                                                                                                                                                                                                                                                                                   ████
+# █████ # alias ip_remote="curl cip.cc"              # (多行) IP	: 172.104.86.42 \n 地址	: 日本  东京都  品川区 \n 运营商	: linode.com \n 数据二	: 日本 | 东京Linode数据中心 \n 数据三	:  \n URL	: http://www.cip.cc/172.104.86.42                                                                                             ████
+# █████ # # alias ip_remote="curl ipinfo.io"         # (多行) { "ip": "114.110.1.38", "hostname": "No Hostname", "city": "Beijing", "region": "Beijing Shi", "country": "CN", "loc": "39.9289,116.3883", "org": "AS4808 CNCGROUP IP network China169 Beijing Province Network"}%                                                 ████
+# █████ # # alias ip_remote="curl https://ip.cn"     # (单行) 当前 IP: 120.133.6.22 来自: 天津市 第一线                                                                                                                                                                                                                              ████
+# █████ # # alias ip_remote="curl myip.ipip.net"     # (单行) 当前 IP：114.110.1.38  来自于：中国 北京 北京 联通/电信                                                                                                                                                                                                                  ████
+# █████ # # IP : 查询本地IP地址                                                                                                                                                                                                                                                                                                    ████
+# █████ # alias ip_local_wholeLine="ifconfig | grep 'inet ' | grep -Fv 127.0.0.1"                                                                                                                                                                                                                                               ████
+# █████ # alias ip_local="ip_local_wholeLine | awk '{print \$2}'"                                                                                                                                                                                                                                                               ████
+# █████ # # IP : 快速查询 外网+本地 IP地址                                                                                                                                                                                                                                                                                          ████
+# █████ # check_id(){                                                                                                                                                                                                                                                                                                           ████
+# █████ #     _local_ip_address_=$(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}')                                                                                                                                                                                                                             ████
+# █████ #     _remote_ip_address_=$(ip_remote | grep IP | awk '{print $3}')                                                                                                                                                                                                                                                     ████
+# █████ #     _remote_ip_location_=$(ip_remote | grep 地址 | awk '{print $3 $4}')                                                                                                                                                                                                                                               ████
+# █████ #     _prompt_local_ip_="IP Local:  "                                                                                                                                                                                                                                                                                   ████
+# █████ #     _prompt_remote_ip_="IP Remote: "                                                                                                                                                                                                                                                                                  ████
+# █████ #     echo "------------------------------------"                                                                                                                                                                                                                                                                       ████
+# █████ #     echo "$_prompt_local_ip_ $_local_ip_address_ (127.0.0.1)"                                                                                                                                                                                                                                                         ████
+# █████ #     echo "$_prompt_remote_ip_ $_remote_ip_address_ ($_remote_ip_location_)"                                                                                                                                                                                                                                           ████
+# █████ #     echo "------------------------------------"                                                                                                                                                                                                                                                                       ████
+# █████ # }                                                                                                                                                                                                                                                                                                                     ████
+# █████ # # IP : 全局化名                                                                                                                                                                                                                                                                                                         ████
+# █████ # alias ip="check_id"                                                                                                                                                                                                                                                                                                   ████
+# ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+# ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+
+
+
