@@ -183,44 +183,44 @@ export PATH="/usr/local/opt/python@3.8.8/bin:$PATH"
 # █████                                                                                                                             █████
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 # █████
-# █████ # |    MAMP / Composer    |
-# █████ # # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Manual Configuration -------------------------------------------------------------------
-# export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php8.1.0/bin:$PATH" # PHP   MANUAL CONFIG (/Applications/MAMP/bin/php/php8.1.0/bin/php)  #|
-# export PATH="/Applications/MAMP/bin/php/php8.1.0/bin:$PATH" # PHP   MANUAL CONFIG (/Applications/MAMP/bin/php/php8.1.0/bin/php)  #|
-# export PATH="/usr/local/bin:$PATH"                                                         # COMPOSER MANUAL CONFIG (/usr/local/bin/composer)                   #|
-# █████ # # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Manual Configuration of PHP version for brew installed PHP -----------------------------
-# █████ # export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"                                                                                                             #|
-# █████ # export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"                                                                                                            #|
-# █████ # export LDFLAGS="-L/opt/homebrew/opt/php@8.1/lib"                                                                                                              #|
-# █████ # export CPPFLAGS="-I/opt/homebrew/opt/php@8.1/include"                                                                                                         #|
-# █████ # # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Manual Configuration of PHP version for MAMP Pro version -------------------------------
-# █████ # export MAMP_PHP_8_2_00='/Applications/MAMP/bin/php/php8.2.0/bin'                                                                                              #|
-# █████ # export MAMP_PHP_8_1_13='/Applications/MAMP/bin/php/php8.1.13/bin'                                                                                             #|
-# █████ # export MAMP_PHP_8_1_07='/Applications/MAMP/bin/php/php8.1.7/bin'                                                                                              #|
-# █████ # export MAMP_PHP_8_1_06='/Applications/MAMP/bin/php/php8.1.6/bin'                                                                                              #|
-# █████ # export MAMP_PHP_7_4_30='/Applications/MAMP/bin/php/php7.4.30/bin'                                                                                             #|
-# █████ # # export PATH='$MAMP_PHP_8_1_07:$PATH'                                                                                                                        #|
-# █████ # alias php='/Applications/MAMP/bin/php/php8.1.7/bin/php -c "/Library/Application Support/appsolute/MAMP PRO/conf/php8.1.7.ini"'                                #|
-# █████ # alias php='/Applications/MAMP/bin/php/php8.1.6/bin/php'                                                                                                       #|
-# █████ # # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>------------------------ Automatic Use MAMP version of PHP ------------------------------
-# █████ # export MAMP_PHP_VERSION='command ls /Applications/MAMP/bin/php/ | sort -n | tail -1'                                                                          #|
-# █████ # export PATH="/Applications/MAMP/bin/php/$MAMP_PHP_VERSION/bin:$PATH"                                                                                          #|
-# █████ # alias php="/Applications/MAMP/bin/php/$MAMP_PHP_VERSION/bin/php"                                                                                              #|
-# █████ # unalias php                                                                                                                                                   #|
-# █████ # # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>--------------------------------- Generic Composer Stuff --------------------------------
-# █████ # Generic Composer Stuff                                                                                                                                        #|
-# █████ # # alias composer='/Applications/MAMP/bin/php/composer'                                                                                                        #|
-# █████ # # export PATH="$HOME/.composer/vendor/bin:$PATH"                                                                                                              #|
-# █████ # # export PATH="$(composer config -g home)/vendor/bin:$PATH"                                                                                                   #|
-# █████ # alias composer='/Applications/MAMP/bin/php/composer'                                                                                                          #|
-# █████ # export PATH="$HOME/.composer/vendor/bin:$PATH"                                                                                                                #|
-# █████ # # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>---------------------------- Use MAMP's version of composer -----------------------------
-# █████ # # alias composer='/Applications/MAMP/bin/php/composer'                                                                                                        #|
-# █████ # # alias php='/Applications/MAMP/bin/php/${MAMP_PHP_VERSION}/bin/php -c "/Library/Application Support/appsolute/MAMP PRO/conf/${MAMP_PHP_VERSION}.ini"'        #|
-# █████ # # alias pear='/Applications/MAMP/bin/php/${MAMP_PHP_VERSION}/bin/pear'                                                                                        #|
-# █████ # # alias pecl='/Applications/MAMP/bin/php/${MAMP_PHP_VERSION}/bin/pecl'                                                                                        #|
-# █████ # # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-----------------------------------------------------------------------------------------
-# █████                                                                                                                             █████
+# █████ # |  Useful Command    |
+# █████	                                            COMPOSER █ sudo composer self-update --profile       # Checking current version of the composer
+# █████	                                            COMPOSER █ sudo composer self-update --2.2           #   Up-grading the composer to subversion of 2.2+
+# █████	                                            COMPOSER █ sudo composer self-update --2             #   Up-grading the composer to subversion of 2.0+ (below 2.2
+# █████                                             COMPOSER █ sudo composer self-update --1             # Down-grading the composer to subversion of 1.0+ (below 2.0
+# █████                                             PHP      █ php-cgi --version                         # Chekcing the version of the php
+# █████                                             PHP      █ php --version                             #     CGI: (common gateway interface) It is a specification "protocol" for transferring information between a Web server and a CGI program.
+# █████                                             PHP      █ which php                                 # Getting the location of the current version of php
+# █████ # | Bew Installed Composer |
+# █████ # |  Manual Configuration  |
+# █████ #                                           export PATH="/opt/homebrew/opt/php@8.1/bin:$PATH"
+# █████ #                                           export PATH="/opt/homebrew/opt/php@8.1/sbin:$PATH"
+# █████ #                                           export LDFLAGS="-L/opt/homebrew/opt/php@8.1/lib"
+# █████ #                                           export CPPFLAGS="-I/opt/homebrew/opt/php@8.1/include"
+# █████ # |  MAMP Non-Pro Composer    |
+# █████ # |  Automatic Configuration  |
+# █████	#                                           #OPT-1 █ export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php8.1.0/bin:$PATH"  # PHP   MANUAL CONFIG (/Applications/MAMP/bin/php/php8.1.0/bin/php)
+# █████	#                                           #OPT-1 █ export PATH="/Applications/MAMP/bin/php/php8.1.0/bin:$PATH"                                 # PHP   MANUAL CONFIG (/Applications/MAMP/bin/php/php8.1.0/bin/php)
+# █████	#                                           #OPT-1 █ export PATH="/usr/local/bin:$PATH"                                                          # COMPOSER MANUAL CONFIG (/usr/local/bin/composer)
+# █████ #                                           #OPT-2 █ export MAMP_PHP_VERSION='command ls /Applications/MAMP/bin/php/ | sort -n | tail -1'
+# █████ #                                           #OPT-2 █ export PATH="/Applications/MAMP/bin/php/$MAMP_PHP_VERSION/bin:$PATH"
+# █████ #                                           #OPT-2 █ alias php="/Applications/MAMP/bin/php/$MAMP_PHP_VERSION/bin/php"
+# █████ #                                           #OPT-2 █ unalias php
+# █████ # |   MAMP Pro Composer    |
+# █████ # |  Manual Configuration  |
+# █████ #                                           export MAMP_PHP_8_2_00='/Applications/MAMP/bin/php/php8.2.0/bin'
+# █████ #                                           export MAMP_PHP_8_1_13='/Applications/MAMP/bin/php/php8.1.13/bin'
+# █████ #                                           export MAMP_PHP_8_1_07='/Applications/MAMP/bin/php/php8.1.7/bin'
+# █████ #                                           export MAMP_PHP_8_1_06='/Applications/MAMP/bin/php/php8.1.6/bin'
+# █████ #                                           export MAMP_PHP_7_4_30='/Applications/MAMP/bin/php/php7.4.30/bin'
+# █████ #                                           alias php='/Applications/MAMP/bin/php/php8.1.7/bin/php -c "/Library/Application Support/appsolute/MAMP PRO/conf/php8.1.7.ini"'
+# █████ #                                           alias php='/Applications/MAMP/bin/php/php8.1.6/bin/php'
+# █████ # |  MAMP Non-Pro Composer |
+# █████ # |  Manual Configuration  |
+# █████ #                                           alias composer='/Applications/MAMP/bin/php/composer'
+# █████ #                                           alias php='/Applications/MAMP/bin/php/${MAMP_PHP_VERSION}/bin/php -c "/Library/Application Support/appsolute/MAMP PRO/conf/${MAMP_PHP_VERSION}.ini"'
+# █████ #                                           alias pear='/Applications/MAMP/bin/php/${MAMP_PHP_VERSION}/bin/pear'
+# █████ #                                           alias pecl='/Applications/MAMP/bin/php/${MAMP_PHP_VERSION}/bin/pecl'
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
@@ -550,6 +550,3 @@ export PATH="/usr/local/opt/python@3.8.8/bin:$PATH"
 # █████                       ```                                                                                                   █████
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-
-
-
