@@ -1,19 +1,15 @@
-# source /Users/suowei_hu/.zshrc
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# # ██████████████████Fig pre block. Keep at the top of this file.████████████████████████
+# # ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
 
-# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-# █████                                     ____   __   __ _   __   ____        __   _  _  ____  ____                               █████
-# █████                                    / ___) /  \ (  ( \ / _\ (  _ \ ___  /  \ / )( \(  _ \(  __)                              █████
-# █████                                    \___ \(  O )/    //    \ )   /(___)(  O )) \/ ( ) _ ( ) _)                               █████
-# █████                                    (____/ \__/ \_)__)\_/\_/(__\_)      \__\)\____/(____/(____)                              █████
-# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-export SONAR_HOME=/usr/local/Cellar/sonar-scanner/{version}/libexec
-export SONAR=$SONAR_HOME/bin export PATH=$SONAR:$PATH
-export PATH=$PATH:/Applications/SonarScanner/bin
-export PATH=$PATH:/Applications/SonarQube/bin
-export PATH=/usr/local/Cellar/sonar-scanner/4.8.0.2856/libexec/bin:$PATH
-# ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
+
+alias Desktop="cd /Users/suowei_hu/Desktop"
+alias Download="cd /Users/suowei_hu/Downloads"
+alias Downloads="cd /Users/suowei_hu/Downloads"
+alias Github="cd /Users/suowei_hu/Documents/é\ GitHub"
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
@@ -29,22 +25,16 @@ export PATH=/usr/local/Cellar/sonar-scanner/4.8.0.2856/libexec/bin:$PATH
 # █████ |    OH-MY-ZSH SETUP    |                                                                                                   █████
 # █████ \_______________________/                                                                                                   █████
 # █████                                                                                                                             █████
-# █████ [[ -f "/Users/suoweihu/.fig/shell/zshrc.pre.zsh" ]] && . "/Users/suoweihu/.fig/shell/zshrc.pre.zsh"                         █████
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fpath+=($HOME/.zsh/pure)
 # █████ tput rmam   #WORD WRAPPPING                                                                                                 █████
 setopt INTERACTIVE_COMMENTS
-export ZSH="/Users/suoweihu/.oh-my-zsh"
-export ZSH_CUSTOM="/Users/suoweihu/zsh_custom"
+# export ZSH="/Users/suoweihu/.oh-my-zsh"
+# export ZSH_CUSTOM="/Users/suoweihu/zsh_custom"
 alias  hr="printf '\n██████████████████████████████ %.0s' {1..5}"
 # █████ export ROOT="/"                                                                                                             █████
 # █████ export HOST="localhost"                                                                                                     █████
-# █████ export HOME="/Users/suoweihu"                                                                                               █████
-# █████ export DESKTOP="/Users/suoweihu/Desktop"                                                                                    █████
-# █████ export DOWNLOAD="/Users/suoweihu/Downloads"                                                                                 █████
-# █████ export DOWNLOADS="/Users/suoweihu/Downloads"                                                                                █████
 # █████ export ZPLUG_HOME=$(brew --prefix)/opt/zplug                                                                                █████
-# █████ export CD_ENHANCE=/Users/suoweihu/enhancd                                                                                   █████
 # █████ source $ZPLUG_HOME/init.zsh                                                                                                 █████
 # █████ source $CD_ENHANCE/init.sh                                                                                                  █████
 ZSH_THEME=""
@@ -70,10 +60,10 @@ DISABLE_AUTO_TITLE="true"
 # █████ - (e.g from "suoweihu@SH-MacBook Downloads % " to "Downloads > ")                                                           █████
 # █████ - If you wish to revert the initial setting, use "export PS1="%n@%m %1~ %# "                                                █████
 # █████                                                                                                                             █████
-# █████ export PS1="%n@%m %1~ %# "                        # Original PS1 file      (e.g suoweihu@SH-MacBook Downloads %)            █████
+# █████ export PS1="%n@%m %1~ %# "                        # Original PS1 file      (e.g suowei_hu@SH-MacBook Downloads %)            █████
 # █████ export PS1="%1~ > "                               # Show the last 1 element in the file path (e.g ~/Downloads >)            █████
 # █████ export PS1="%2~ > "                               # Show the last 2 element in the file path (e.g   Downloads >)            █████
-# █████ export PS1="%~ > "                                # Show the full path         (e.g /Users/suoweihu/Downloads >)            █████
+# █████ export PS1="%~ > "                                # Show the full path         (e.g /Users/suowei_hu/Downloads >)            █████
 # █████ export PS1="[%1~] "                               # Curretnly Using                                                         █████
 # █████                                                                                                                             █████
 # █████ alias ec="$EDITOR $HOME/.zshrc"                   # (修改.zshrc文件) open ~/.zshrc in using the default editor specified     █████
@@ -92,3 +82,9 @@ export PS1="→"
 # █████                                                                                                                             █████
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 # ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+
+
+# # ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑ ↑
+# # █████████████████Fig post block. Keep at the bottom of this file.██████████████████████
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
